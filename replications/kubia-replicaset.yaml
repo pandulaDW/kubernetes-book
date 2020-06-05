@@ -17,3 +17,8 @@ spec:
           image: luksa/kubia
           ports:
             - containerPort: 8080
+          readinessProbe:
+            exec:
+              command:
+                - ls
+                - /var/ready
